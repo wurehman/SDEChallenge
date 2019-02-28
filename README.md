@@ -4,11 +4,21 @@
 
 Write an interface for a data structure that can provide the moving average of the last N elements added, add elements to the structure and get access to the elements. Provide an efficient implementation of the interface for the data structure.
 
-### Minimum Requirements
+## Coding Solution
 
-1. Provide a separate interface (IE `interface`/`trait`) with documentation for the data structure
-2. Provide an implementation for the interface
-3. Provide any additional explanation about the interface and implementation in a README file.
+``` MovingAverage``` interface is provided with methods to add an element, get an element at specific index and get moving average of last N elements.
+
+``` SimpleMovingAverage``` class implements the interface and provides the implementation using LinkedList.
+
+### Assumptions
+
+1. The data added to the list stays in the list and can only be accessed but not removed.
+2. The value of N is provided by the caller at the time of calling the method and not during the initializtion of data structure. So the user has flexibility of getting the moving average for different values of N.
+3. Only provide the method to get the moving average of last N numbers and not the moving averages for the entire list over N.
+4. Since the main goal seems to be getting the moving average so the most frequent opertations are insert and get averages.
+### Solution Explanation
+
+Based on the above assumption, LinkedList seems to be the best candidate for both time and space complexity. So LinkedList is being used as the data structure for carrying out the required operations. Inserts will be fast as the time complexity is O(1). Accessing the element will be O(n). In order to improve the performance of calculating moving average we are inserting element at the front of list. This will enusre that we only need to access first N elements to calculate the moving average. So the time complexity will be O(N), N being the number of elements for which average is required and not the size of list.    
 
 ## Design Question
 
