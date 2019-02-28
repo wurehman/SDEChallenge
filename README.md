@@ -1,4 +1,4 @@
-# PaytmLabs SDE Challenge
+# PaytmLabs SDE Challenge Solution - Waqas ur Rehman
 
 ## Coding Question
 
