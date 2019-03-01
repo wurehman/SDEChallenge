@@ -36,7 +36,7 @@ We need to provide Google Analytic like services to our customers. Please provid
 ## Design Solution
 
 The detailed design can be accessed at
-[Design Document](src/application_architecture.pdf).
+[Design Document](application_architecture.pdf).
 
 The system provides following APIs
 1. Events API Service: To record the events to underlying database
